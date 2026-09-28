@@ -1,81 +1,92 @@
-"""DEMO / SAMPLE data for a FICTIONAL university. Replace with real info later."""
+"""
+Knowledge base for COMSATS University Islamabad (CUI), Wah Campus.
 
-UNIVERSITY_NAME = "Northbridge University (DEMO)"
+HOW THIS WAS BUILT: cuiwah.edu.pk blocks automated reading of most pages, so this
+file uses (a) facts visible on the public cuiwah.edu.pk pages/search snippets and
+(b) clearly-marked third-party estimates. Items marked [VERIFY] should be checked
+against https://cuiwah.edu.pk before relying on them. Edit the text below freely;
+the agents only answer from what is written here.
+Last updated: September 2026.
+"""
+
+UNIVERSITY_NAME = "COMSATS University Islamabad (CUI), Wah Campus"
+WEBSITE = "https://cuiwah.edu.pk"
 
 ADMISSIONS = {
-    "Undergraduate eligibility": "High school diploma (or equivalent) with at least 60% marks.",
-    "Postgraduate eligibility": "Relevant bachelor's degree with CGPA 2.5/4.0 or higher.",
-    "Application process": [
-        "Create an account on the admissions portal (demo: apply.northbridge.example)",
-        "Fill in the online application form",
-        "Upload documents and pay the application fee",
-        "Take the entrance test (undergraduate) or attend an interview (postgraduate)",
-        "Merit list is published; accepted students confirm by paying the admission fee",
+    "Admission policy": "Merit-based admissions for students from all backgrounds. Applications are submitted online through the CUI admission portal (see https://cuiwah.edu.pk, Admissions section).",
+    "Intakes": "Two intakes per year: Spring and Fall (Fall is the main intake). Exact dates change every year; check the admission portal.",
+    "Application deadline (latest known)": "For Fall 2026 the Wah campus closing date was reported as 11 August 2026 (third-party source, [VERIFY]). Fall 2026 has passed; for the next intake (Spring 2027) watch cuiwah.edu.pk for the announcement.",
+    "Entry test": "Applicants are reported to need a valid NTS NAT (National Aptitude Test) score; those who have not taken it can register for the NTS test (third-party source, [VERIFY]).",
+    "Engineering eligibility (from CUI Wah undergraduate page)": "Intermediate (HS/HSSC/A-level) Pre-Engineering with Physics, Mathematics and Chemistry with minimum 60% marks, OR DAE in the same/relevant field with minimum 60% marks, OR Intermediate with ICS (Physics, Mathematics, Computer Science/Computer Studies) with minimum 60% marks. Other conditions approved by the competent authority and the Pakistan Engineering Council also apply.",
+    "Other programs eligibility": "Each program has its own criteria. Details are in the Undergraduate Prospectus on cuiwah.edu.pk (Admissions > Prospectus).",
+    "Application steps (general CUI process)": [
+        "Take/register for the NTS NAT test if you do not already have a valid score",
+        "Apply online through the CUI admission portal and select Wah campus and your program preferences",
+        "Upload the required documents and pay the application processing fee",
+        "Check the merit list; if selected, download the offer letter",
+        "Pay the first semester fee to confirm the seat",
     ],
-    "Required documents": [
-        "Previous academic transcripts and certificates",
-        "National ID card / passport copy",
-        "4 passport-size photographs",
-        "Entrance test admit card",
-    ],
-    "Deadlines": {
-        "Fall intake": "Applications close July 15, classes start September 1",
-        "Spring intake": "Applications close December 10, classes start February 1",
-    },
-    "Entrance test": "Northbridge Aptitude Test (NAT): 100 MCQs in Math, English and Analytical Reasoning; passing score 40%.",
-    "Admissions office": "admissions@northbridge.example, Mon-Fri 9am-4pm",
+    "Documents": "Typically educational certificates/transcripts, CNIC or B-Form, photographs and test result. The exact list is in the prospectus and admission portal [VERIFY].",
+    "Where to get official details": "Undergraduate Prospectus and admission notices on https://cuiwah.edu.pk, or contact the Wah campus admission office.",
 }
 
 FEES = {
-    "Application fee": "$25 (non-refundable)",
-    "Admission fee": "$150 (one-time, at enrollment)",
-    "Tuition per semester": {
-        "Computer Science": "$1,800",
-        "Business Administration": "$1,500",
-        "Electrical Engineering": "$1,900",
-        "Psychology": "$1,300",
-        "MBA": "$2,200",
-        "MS Computer Science": "$2,400",
+    "Official fee structure (Fall 2025 session, subject to revision)": {
+        "Admission fee": "Rs. 22,000 one-time, charged to new entrants in addition to the semester fee",
+        "Per credit hour fee (additional semesters, Undergraduate and Masters programs)": "Rs. 6,000 per credit hour",
+        "Per credit hour fee (additional semesters, MS/PhD programs)": "Rs. 4,000 per credit hour",
+        "Registration fee": "Charged for each additional semester in addition to the per-credit-hour fee",
+        "Degree fee": "Rs. 10,000 on completion/award of the degree",
+        "Note": "Fee rates are subject to revision in subsequent semesters. The full fee page is at https://cuiwah.edu.pk/fee-structure.aspx",
     },
-    "Other charges": "Library and lab fee $100 per semester; exam fee $50 per semester.",
-    "Scholarships": {
-        "Merit Scholarship": "50% tuition waiver for students scoring 85% or above",
-        "Need-Based Aid": "Up to 30% waiver with income documents",
-        "Sibling Discount": "10% off tuition for the second sibling",
-        "Sports Scholarship": "25% waiver for national-level athletes",
+    "First-semester total": "The exact first-semester total per program is not included in this knowledge base. Please check the fee structure page or the admission office.",
+    "Unofficial estimates (third-party websites, not from CUI, [VERIFY])": {
+        "Typical semester cost at Wah and similar campuses": "roughly Rs. 110,000 to 125,000 per semester (engineering/computing)",
+        "Other one-time charges reported": "Endowment fund about Rs. 5,000; refundable caution money about Rs. 5,000",
+        "Hostel (where available)": "about Rs. 5,000 one-time plus Rs. 30,000 to 40,000 per semester, excluding food",
     },
-    "Payment options": "Bank transfer, credit/debit card, or 3 installments per semester (no interest).",
-    "Refund policy": "Full tuition refund before classes start; 50% within the first two weeks; none afterwards.",
-    "Accounts office": "fees@northbridge.example",
+    "Overseas / international students": "Different fee structures apply; ask the admission office.",
+    "Scholarships": "Merit-based tuition waivers and government schemes (for example the Ehsaas Undergraduate Scholarship) are commonly available to CUI students. Exact criteria for Wah are not in this knowledge base [VERIFY].",
+    "Where to get official details": "https://cuiwah.edu.pk/fee-structure.aspx or the campus accounts/admission office.",
 }
 
 PROGRAMS = {
-    "Faculty of Computing": {
-        "BS Computer Science": "4 years. Eligibility: 60% in high school with Math. Careers: software engineer, data scientist, AI engineer.",
-        "MS Computer Science": "2 years. Eligibility: BS in CS or related field. Careers: researcher, senior engineer, lecturer.",
-    },
-    "Faculty of Business": {
-        "BBA": "4 years. Eligibility: any high school stream, 60% marks. Careers: marketing, finance, entrepreneurship.",
-        "MBA": "2 years. Eligibility: bachelor's degree plus 2 years experience preferred. Careers: management, consulting.",
-    },
-    "Faculty of Engineering": {
-        "BS Electrical Engineering": "4 years. Eligibility: 60% in high school with Physics and Math. Careers: power systems, electronics, telecom.",
-    },
-    "Faculty of Social Sciences": {
-        "BS Psychology": "4 years. Eligibility: 55% in high school. Careers: counselor, HR specialist, researcher.",
-    },
-    "Academic system": "Semester-based; 2 semesters per year; 15 weeks each. Graduation requires CGPA 2.0/4.0 or higher.",
+    "Overview": "CUI Wah Campus has 8 academic departments. The current prospectus lists 22 offered programs in total: 5 undergraduate, 11 MS and 6 PhD (as shown on the prospectus page; an older page listed 28 programs, so [VERIFY] the current list).",
+    "Academic departments": [
+        "Computer Science (Computing)",
+        "Computer Engineering",
+        "Electrical Engineering",
+        "Mechanical Engineering",
+        "Civil Engineering",
+        "Management Sciences",
+        "Mathematics",
+        "Humanities",
+    ],
+    "Program levels": "BS (undergraduate), MS and PhD. The engineering programs are subject to Pakistan Engineering Council (PEC) requirements.",
+    "Reported (unofficial) program": "BS Artificial Intelligence has been reported at Wah by a third-party guide [VERIFY].",
+    "Eligibility": "Engineering: FSc Pre-Engineering (or DAE, or ICS with Physics, Mathematics, Computer Science) with minimum 60%. Other programs: see prospectus.",
+    "Labs": "Major laboratories include Electronics, Microprocessor, VLSI and DSP laboratories; 51 fully equipped laboratories in total.",
+    "Course catalog": "Public course catalog: http://cuonline.comsats.edu.pk/publicaccess/",
+    "Prospectus": "Undergraduate Prospectus is available on https://cuiwah.edu.pk under Admissions > Prospectus.",
+    "Careers": "Detailed career information per program is not in this knowledge base. CUI Wah runs research and commercialization activity through its Office of Research, Innovation and Commercialization (ORIC).",
 }
 
 GENERAL = {
-    "About": "Northbridge University is a fictional demo university founded in 1995, with about 8,000 students.",
-    "Campus": "Green 60-acre campus with a central library, sports complex, cafeteria, and a medical center.",
-    "Location": "123 Demo Street, Sampletown (fictional).",
-    "Hostels": "Separate hostels for men and women. Approx. $80/month for shared rooms; apply after admission.",
-    "Transport": "University shuttle runs between campus and the city center every 30 minutes.",
-    "Facilities": "Wi-Fi campus, computer labs, digital library, career services, and clubs (robotics, debate, music).",
-    "Library hours": "Mon-Sat 8am-10pm, Sunday 10am-6pm.",
-    "Contact": "info@northbridge.example, +1-555-0100",
+    "About": "COMSATS University Islamabad (CUI) Wah Campus was established in 2001 and is one of the seven CUI campuses in Pakistan. It has over 3,000 students (3,289 enrolled per the campus academic page) and nearly 200 faculty members.",
+    "Leadership": "Director of the Wah Campus: Prof. Dr. Samina Nawab. Rector of CUI: Prof. Dr. Raheel Qamar.",
+    "Location": "Wah Cantonment, Punjab, Pakistan (Quaid Avenue, Wah Cantt) [VERIFY exact address on the website].",
+    "Classrooms": "All lecture rooms are IT-enabled, air-conditioned and well furnished.",
+    "Library": "About 25,000 library books plus a library portal.",
+    "Labs": "51 fully equipped laboratories; major ones are Electronics, Microprocessor, VLSI and DSP labs.",
+    "Hostel": "Hostel facility for about 300 male/female students.",
+    "Transport": "Transport is provided on specified routes from Islamabad, Rawalpindi and Attock, with 10 buses of 64 seats.",
+    "Cafeteria": "Food-street style catering with shops and kiosks offering a range of snacks and meals.",
+    "Sports": "Sports is an integral part of extracurricular activities at the campus.",
+    "Safety": "The campus states that student safety is its top concern.",
+    "Research": "Office of Research, Innovation and Commercialization (ORIC). Figures shown on the campus site: 2,269 journal papers, 385 conference papers, 53 book chapters, 93 funded projects, 90 IGNITE funded projects and 28 patents.",
+    "Rankings (CUI as a whole)": "THE World University Rankings 2026: 601-800 band, ranked #2 in Pakistan among listed universities as shown on the campus site; THE Impact Rankings: 17 of 17 SDGs, #1 in Pakistan (2024).",
+    "Student portals": "CUOnline (student portal), Course Catalogue, Library Portal, Microsoft for all, UNESCO Water Chair, IRC.",
+    "Contact": "Use the contact section of https://cuiwah.edu.pk for official phone numbers and email addresses.",
 }
 
 
@@ -103,14 +114,16 @@ def build_prompt(topic, data, query, history=""):
     safe_query = query.replace("{", "(").replace("}", ")")
     safe_history = history.replace("{", "(").replace("}", ")")
     return (
-        f"You are answering for {UNIVERSITY_NAME}, a FICTIONAL demo university.\n"
+        f"You are the assistant for {UNIVERSITY_NAME}, answering prospective and current students.\n"
         f"Topic: {topic}\n\n"
-        f"KNOWLEDGE BASE (demo data):\n{to_text(data)}\n\n"
+        f"KNOWLEDGE BASE:\n{to_text(data)}\n\n"
         f"RECENT CONVERSATION:\n{safe_history or 'None'}\n\n"
         f"STUDENT QUESTION: {safe_query}\n\n"
         "RULES:\n"
         "- Answer ONLY using the knowledge base above.\n"
-        "- If the answer is not in the knowledge base, say so politely and suggest contacting the relevant office.\n"
+        "- If the answer is not in the knowledge base, say you do not have that detail and point the student to https://cuiwah.edu.pk or the campus office.\n"
+        "- Items marked [VERIFY] or 'unofficial' must be presented as approximate, and tell the student to confirm on the official website.\n"
+        "- Fees and dates change every semester; remind the student to confirm on the official website.\n"
         "- Be friendly, clear and concise. Use short bullet points when helpful.\n"
-        "- Never invent numbers, dates or policies."
+        "- Never invent numbers, dates, program names or policies."
     )

@@ -12,10 +12,9 @@ os.environ["OTEL_SDK_DISABLED"] = "true"
 
 import streamlit as st
 
-st.set_page_config(page_title="Northbridge University Assistant", page_icon="🎓", layout="wide")
+st.set_page_config(page_title="CUI Wah Campus Assistant", page_icon="🎓", layout="wide")
 
 from manager_agent import get_llm, handle_query
-from university_data import UNIVERSITY_NAME
 
 MODES = ["Auto / Manager", "Admissions", "Fee", "Degree & Programs", "General"]
 
@@ -36,9 +35,9 @@ st.markdown(
 @media (max-width: 640px) {.hero h1 {font-size:1.4rem;} .hero {padding:18px;}}
 </style>
 <div class="hero">
-  <h1>🎓 Northbridge University Assistant</h1>
-  <p>Multi-agent chatbot: a Manager routes your question to the right specialist.</p>
-  <span class="badge">DEMO • Fictional university data</span>
+  <h1>🎓 CUI Wah Campus Assistant</h1>
+  <p>Ask about admissions, fees, programs and campus life. A Manager routes your question to the right specialist.</p>
+  <span class="badge">COMSATS University Islamabad • Wah Campus</span>
 </div>
 """,
     unsafe_allow_html=True,
@@ -101,11 +100,11 @@ with st.sidebar:
         "- 📚 **Degree & Programs**: degrees, duration, careers\n"
         "- 🏛️ **General**: campus, hostels, contacts"
     )
-    st.caption(f"Data source: {UNIVERSITY_NAME} sample data.")
+    st.caption("Info compiled from cuiwah.edu.pk. Fees and dates change; always confirm on the official website.")
 
 # ---------------- Chat history ----------------
 if not st.session_state.messages:
-    st.info("👋 Ask me about admissions, fees, programs or campus life. Try: *What scholarships are available?*")
+    st.info("👋 Ask me about admissions, fees, programs or campus life. Try: *What is the admission fee?*")
 
 for m in st.session_state.messages:
     avatar = "🧑‍🎓" if m["role"] == "user" else "🎓"
